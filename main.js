@@ -1,5 +1,5 @@
 
-let GameContract={
+let GameContractMixin={
 
     data: {
       contracAddress:"ct_2L4DL5wwbE1VAd8eBMZEdpkDFZX9wt1YzJUKS4MoDZtNLpCqmc",
@@ -195,6 +195,7 @@ let GameContract={
 let GameBordComponent = {
     template:"#game-board-template",
     // props:['min','max','number'],
+    mixins:[GameContractMixin],
     data() {
           return {
             min: 0,
@@ -205,8 +206,12 @@ let GameBordComponent = {
             }
             },
     created: function () {
+
+      await this.getClient();
+      await this.getContractInstance();
+      console.log(this.client);
+
         isLoading = true
-        GameContract.getClient
         this.getRandomNumber()
         isLoading = false;
        
