@@ -31,6 +31,7 @@
           <div> 
             <div id="generator">
                 <div id="title">Random Number Generator</div>
+                 <div i></div>
                  <p id="rNum">{{ number }}</p>
                  <div id="inputContainer">
                   <div id="headers"> 
@@ -38,6 +39,7 @@
                  <p>Max</p>
              </div>
             <div id="inputs">
+               
                <input disabled id="min" v-model="min" min="-9999999999" max="9999999999" type="number"/>
                <input disabled id="max" v-model="max" min="-9999999999" max="9999999999" type="number"/>
               <input id="generate" type="submit" value="Generate Number" v-on:click="getInput()"/>
