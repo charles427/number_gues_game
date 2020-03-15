@@ -195,7 +195,7 @@ let GameContractMixin={
 let GameBordComponent = {
     template:"#game-board-template",
     // props:['min','max','number'],
-    mixins:[GameContractMixin],
+   // mixins:[GameContractMixin],
     props: {
       meme: Object,
       client: Object
