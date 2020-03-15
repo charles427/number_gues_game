@@ -207,9 +207,9 @@ let GameBordComponent = {
             },
   async  created() {
 
-      await this.getClient();
-      await this.getContractInstance();
-      console.log(this.client);
+     // await this.getClient();
+    //  await this.getContractInstance();
+      //console.log(this.client);
 
         isLoading = true
         this.getRandomNumber()
@@ -256,7 +256,15 @@ let WalletCommponet = {
 
 var app = new Vue({
   el: '#app',
+  mixins:[GameContractMixin],
   components:{
     'game-board-items':GameBordComponent
   },
+async created(){
+  await this.getClient();
+  await this.getContractInstance();
+  console.log(this.client);
+
+}
+
 })
