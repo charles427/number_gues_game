@@ -205,7 +205,7 @@ let GameBordComponent = {
             
             }
             },
-  async  created: function () {
+  async  created() {
 
       await this.getClient();
       await this.getContractInstance();
