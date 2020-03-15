@@ -207,9 +207,9 @@ let GameBordComponent = {
             },
   async  created() {
 
-     // await this.getClient();
-    //  await this.getContractInstance();
-      //console.log(this.client);
+      await this.getClient();
+     await this.getContractInstance();
+      console.log(this.client);
 
         isLoading = true
         this.getRandomNumber()
